@@ -65,13 +65,15 @@ List* get_adj_nodes(Node* n){
         break;
       }
   }
-  if (row != -1 && col != -1){
+  if (row == -1 || col == -1){
+    return list;
+  }
+    
     for (int num = 1; num <= 9; num++){
       Node* adj_node = copy(n);
       adj_node->sudo[row][col] = num;
       list = append(list, adj_node);
     }
-  }
   return list;
 }
 
