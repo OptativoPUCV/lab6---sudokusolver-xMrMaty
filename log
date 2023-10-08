@@ -16,3 +16,17 @@ sudoku.c:59:11: error: assignment to ‘List *’ from ‘int’ makes pointer f
 cc1: all warnings being treated as errors
 Compilation failed
 dbc2f8c
+Sun 08 Oct 2023 11:22:17 PM UTC: 
+ sudoku.c | 19 ++++++++++++++++---
+ 1 file changed, 16 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:72:14: error: implicit declaration of function ‘append’ [-Werror=implicit-function-declaration]
+   72 |       list = append(list, adj_node);
+      |              ^~~~~~
+sudoku.c:72:12: error: assignment to ‘List *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   72 |       list = append(list, adj_node);
+      |            ^
+cc1: all warnings being treated as errors
+Compilation failed
+ebc68db
