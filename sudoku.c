@@ -136,7 +136,7 @@ Node* DFS(Node* initial, int* cont){
   
   List* stack = createList();
   pushBack(stack, initial);
-  while (!is_empty(stack)){
+  while (top(stack)==NULL){
     Node* current = (Node*)last(stack);
     popBack(stack);
     if (is_final(current)){
