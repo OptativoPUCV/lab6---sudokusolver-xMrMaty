@@ -124,7 +124,7 @@ List* get_adj_nodes(Node* n){
 int is_final(Node* n){
   for (int fila=0;fila<9;fila++){
     for(int columna=0;columna<9;columna++){
-      if(n->sudo[fila][coljumna]){
+      if(n->sudo[fila][columna]){
         return 0;
       }
     }
