@@ -67,3 +67,17 @@ sudoku.c:104:12: error: expected ‘;’ before ‘:’ token
       |            ;
 Compilation failed
 c455007
+Mon 09 Oct 2023 12:04:54 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:113:19: error: array subscript -1 is below array bounds of ‘int[9][9]’ [-Werror=array-bounds]
+  113 |     adj_node->sudo[fil][col]=num;
+      |     ~~~~~~~~~~~~~~^~~~~
+sudoku.c:7:8: note: while referencing ‘sudo’
+    7 |    int sudo[9][9];
+      |        ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7a89505
