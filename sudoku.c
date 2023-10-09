@@ -137,7 +137,7 @@ Node* DFS(Node* initial, int* cont){
   pushBack(stack, initial);
 
   while(!is_empty(stack)){
-    Node* current=(Node*)last(stack;
+    Node* current=(Node*)last(stack);
     popBack(stack);
 
     if(is_final(current)){
