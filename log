@@ -106,3 +106,9 @@ sudoku.c:99:9: error: ‘copia_columna’ undeclared (first use in this function
 sudoku.c:99:9: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 8b3abcd
+Mon 09 Oct 2023 12:09:18 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  6|2
+total_score: 45/70
+98c37f2

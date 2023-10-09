@@ -96,7 +96,7 @@ List* get_adj_nodes(Node* n){
     for(int columna=0;columna<9;columna++){
       if(n->sudo[fila][columna] == 0){
         fila_vacia=fila;
-        copia_columna=columna;
+        columna_vacia=columna;
         break;
       }
     }
