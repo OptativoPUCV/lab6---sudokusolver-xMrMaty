@@ -148,6 +148,7 @@ Node* DFS(Node* initial, int* cont){
 
     int fila_vacia=-1;
     int columna_vacia=-1;
+    
     for(int fila=0;fila<9;fila++){
       for(int columna=0;columna<9;columna++){
         if(current->sudo[fila][columna]==0){
@@ -160,7 +161,7 @@ Node* DFS(Node* initial, int* cont){
         break;
       }
     }
-/*
+
     if(fila_vacia!=-1){
       for(int num=1;num<=9;num++){
         Node* adj_node=copy(current);
@@ -173,7 +174,7 @@ Node* DFS(Node* initial, int* cont){
         }
       }
     }
-  }*/
+  }
   return NULL;
 }
 
