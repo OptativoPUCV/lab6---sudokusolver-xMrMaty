@@ -136,9 +136,7 @@ Node* DFS(Node* initial, int* cont){
   
   List* stack = createList();
   pushBack(stack, initial);
-
   while (!is_empty(stack)){
-    
     Node* current = (Node*)last(stack);
     popBack(stack);
     if (is_final(current)){
@@ -155,13 +153,13 @@ Node* DFS(Node* initial, int* cont){
     free(adj_nodes); 
     free(current);   
     (*cont)++;
-    }
+  }
   return NULL;
 }
 
 
 
-/*
+
 int main( int argc, char *argv[] ){
 
   Node* initial= read_file("s12a.txt");;
@@ -172,4 +170,4 @@ int main( int argc, char *argv[] ){
   print_node(final);
 
   return 0;
-}*/
+}
