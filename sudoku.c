@@ -133,52 +133,27 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
-
-  List* stack=createList();
-  pushBack(stack, initial);
-
-  while(!is_empty(stack)){
-    Node* current=(Node*)last(stack);
-    popBack(stack);
-
-    if(is_final(current)){
-      clean(stack);
-      return current;
-    }
-
-    if (*cont >= max_depth){
-      continue;
-    }
-
-    int fila_vacia=-1;
-    int columna_vacia=-1;
+  
+  Stack* S=createStack();
+  push(S, n);
+  *cont = 0;
+  while(top(S) != NULL){
     
-    for(int fila=0;fila<9;fila++){
-      for(int columna=0;columna<9;columna++){
-        if(current->sudo[fila][columna]==0){
-          fila_vacia=fila;
-          columna_vacia=columna;
-          break;
-        }
-      }
-      if(fila_vacia!=-1){
-        break;
-      }
-    }
-
-    if(fila_vacia!=-1){
-      for(int num=1;num<=9;num++){
-        Node* adj_node=copy(current);
-        adj_node->sudo[fila_vacia][columna_vacia]=num;
-
-        if(is_valid(adj_node)){
-          pushBack(stack, adj_node);
-        }else{
-          free(adj_node);
-        }
-      }
-    }
+    Node *current = top(S);
+    pop(S);
     (*cont)++;
+    if(is_final(current)){
+      return current; 
+    }
+    List *lista = get_adj_nodes(current);
+    if(lista != NULL){
+      while (next(lista) != NULL){
+        
+        int *matriz = (int *)next(lista);
+        push(S, matriz);
+      }
+    clean(lista);
+    free(current);
   }
   return NULL;
 }
