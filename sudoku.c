@@ -146,6 +146,10 @@ Node* DFS(Node* initial, int* cont){
       return current;
     }
 
+    if (*cont >= max_depth){
+      continue;
+    }
+
     int fila_vacia=-1;
     int columna_vacia=-1;
     
@@ -174,6 +178,7 @@ Node* DFS(Node* initial, int* cont){
         }
       }
     }
+    (*cont)++;
   }
   return NULL;
 }
