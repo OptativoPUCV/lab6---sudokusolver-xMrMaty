@@ -95,3 +95,14 @@ sudoku.c:7:8: note: while referencing ‘sudo’
 cc1: all warnings being treated as errors
 Compilation failed
 f481a40
+Mon 09 Oct 2023 12:09:08 AM UTC: 
+ sudoku.c | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:99:9: error: ‘copia_columna’ undeclared (first use in this function)
+   99 |         copia_columna=columna;
+      |         ^~~~~~~~~~~~~
+sudoku.c:99:9: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+8b3abcd

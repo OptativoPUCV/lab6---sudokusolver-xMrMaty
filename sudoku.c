@@ -90,27 +90,27 @@ int is_valid(Node* n){
 
 List* get_adj_nodes(Node* n){
   List* list=createList();
-  int copia_fila=-1;
-  int copia_columna=-1;
+  int fila_vacia=-1;
+  int columna_vacia=-1;
   for(int fila=0;fila<9;fila++){
     for(int columna=0;columna<9;columna++){
       if(n->sudo[fila][columna] == 0){
-        copia_fila=fila;
+        fila_vacia=fila;
         copia_columna=columna;
         break;
       }
     }
-    if (copia_fila!=-1){
+    if (fila_vacia!=-1){
       break;
     }
   }
-  if(copia_fila!=-1){
+  if(fila_vacia==-1){
     return list;
   }
 
   for(int num=1;num<=9;num++){
     Node* adj_node=copy(n);
-    adj_node->sudo[copia_fila][copia_columna] = num;
+    adj_node->sudo[fila_vacia][columna_vacia] = num;
     if(is_valid(adj_node)){
       pushBack(list, adj_node);
     }else{
