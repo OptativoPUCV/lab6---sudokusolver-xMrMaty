@@ -160,7 +160,7 @@ Node* DFS(Node* initial, int* cont){
         break;
       }
     }
-
+/*
     if(fila_vacia!=-1){
       for(int num=1;num<=9;num++){
         Node* adj_node=copy(current);
@@ -173,7 +173,7 @@ Node* DFS(Node* initial, int* cont){
         }
       }
     }
-  }
+  }*/
   return NULL;
 }
 
