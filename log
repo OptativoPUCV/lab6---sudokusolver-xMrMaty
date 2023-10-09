@@ -297,3 +297,14 @@ test.c:7:8: error: ‘_strdup’ defined but not used [-Werror=unused-function]
 cc1: all warnings being treated as errors
 Compilation failed
 1738e96
+Mon 09 Oct 2023 02:22:01 AM UTC: 
+ sudoku.c | 29 +++++++++++++++--------------
+ 1 file changed, 15 insertions(+), 14 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:138:19: error: ‘n’ undeclared (first use in this function)
+  138 |   pushBack(stack, n);
+      |                   ^
+sudoku.c:138:19: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+1fcdb3a
