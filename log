@@ -112,3 +112,15 @@ Mon 09 Oct 2023 12:09:18 AM UTC:
  tests:  6|2
 total_score: 45/70
 98c37f2
+Mon 09 Oct 2023 12:15:22 AM UTC: 
+ sudoku.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘is_final’:
+sudoku.c:127:24: error: ‘coljumna’ undeclared (first use in this function); did you mean ‘columna’?
+  127 |       if(n->sudo[fila][coljumna]){
+      |                        ^~~~~~~~
+      |                        columna
+sudoku.c:127:24: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+e35fa75
