@@ -50,3 +50,20 @@ Sun 08 Oct 2023 11:38:26 PM UTC:
  tests:  0|5
 total_score: 0/70
 fc78ff5
+Sun 08 Oct 2023 11:52:04 PM UTC: 
+ sudoku.c | 39 +++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 39 insertions(+)
+ tests:  3|4
+total_score: 20/70
+c455007
+Mon 09 Oct 2023 12:04:38 AM UTC: 
+ sudoku.c | 36 +++++++++++++++++++-----------------
+ 1 file changed, 19 insertions(+), 17 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:104:12: error: expected ‘;’ before ‘:’ token
+  104 |       break:
+      |            ^
+      |            ;
+Compilation failed
+c455007
